@@ -23,6 +23,11 @@ rose.sell(1)
 rose.sell(24)
 rose.sell(9)
 
+# # Will raise an argument error
+# rose.sell(500)
+# # Will call restock in `sell` method
+# rose.sell(349)
+
 # Check stock and total sold
 # rose.quantity_in_stock=> 98, rose.total_sold => 15088
 puts "After sales, there are #{rose.quantity_in_stock} #{rose.name.capitalize}(s) in stock and #{rose.total_sold} units sold."
