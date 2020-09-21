@@ -1,6 +1,5 @@
 class Flower
-  attr_accessor :name, :color, :quantity_in_stock
-  attr_reader :bundle_size, :max_stock, :total_sold
+  attr_reader :bundle_size, :max_stock, :total_sold, :name, :color, :quantity_in_stock
 
   def initialize(hash)
     @name = hash[:name]

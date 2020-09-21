@@ -3,7 +3,7 @@
 # Ada C14
 # Flower Shop: Main Program
 
-require_relative 'flowers'
+require_relative 'flower'
 
 rose = Flower.new(
   name: "rose",
