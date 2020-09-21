@@ -12,8 +12,12 @@ class Flower
   end
 
   def sell(amount)
+    raise ArgumentError , "Ordered number of flowers exceeds the max stock of flowers" if amount > max_stock
     @quantity_in_stock -= amount
     @total_sold += 1
+    while @quantity_in_stock <= 0
+      self.restock
+    end
   end
 
   def restock
@@ -22,5 +26,4 @@ class Flower
     flowers_ordered = bundles_needed * @bundle_size
     @quantity_in_stock += flowers_ordered
   end
-
 end
